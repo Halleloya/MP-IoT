@@ -1,0 +1,28 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "id": "urn:dev:wot:com:window:1",
+    "title": "window",
+    "@type": "window",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "links": [{
+        "href": "urn:dev:wot:com:noniot:zone:2",
+        "rel": "feeds",
+        "mediaType": "application/td"
+    },
+    {
+        "href": "urn:dev:wot:com:noniot:room:1",
+        "rel": "feeds",
+        "mediaType": "application/td"
+    }]
+}

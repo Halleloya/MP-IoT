@@ -1,0 +1,9 @@
+{
+  "objectDevice": {
+    "type": "fan",
+    "id": "urn:dev:wot:com:fan:1"
+  },
+  "action": {
+    "type": "plug_in"
+  }
+}

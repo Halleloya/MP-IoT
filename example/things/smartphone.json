@@ -1,0 +1,11 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "id": "urn:dev:wot:com:smartphone:1",
+    "title": "smartphone",
+    "@type": "smartphone",
+    "links": [{
+        "href": "urn:dev:wot:com:noniot:zone:2",
+        "rel": "feeds",
+        "mediaType": "application/td"
+    }]
+}

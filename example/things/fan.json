@@ -1,0 +1,36 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "id": "urn:dev:wot:com:fan:1",
+    "title": "fan",
+    "@type": "fan",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "actions": {
+        "connected_to": {
+            "id": "urn:dev:wot:com:smart_plug:1"
+        }
+    },
+    "properties": {
+        "work_power": {
+            "writable": "true",
+            "schema": { "type": "integer" },
+            "forms": [{ "href": "/things/fan/properties/work_power" }],
+            "value": 30
+        }
+    },
+    "links": [{
+        "href": "urn:dev:wot:com:noniot:room:1",
+        "rel": "feeds",
+        "mediaType": "application/td"
+    }]
+}

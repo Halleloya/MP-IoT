@@ -1,0 +1,41 @@
+{% extends "home.html" %}
+
+
+{% block dashboard_content %}
+<h2 class="mb-5">Delete Thing</h2>
+
+<div class="container-sm dashboard">
+    <div class="row">
+        <div class="col">
+            <div class="row sidebar-row">            
+                <div class="col-md-9 main">
+                <form class="delete-form" method="POST" action="{{url_for('policy_api.delete2')}}">
+                    <div>
+                        <div class="form-group">
+                            <select id="thing_id" class="custom-select">
+                                {% for thing_id in thing_ids %}
+                                    <option value="{{thing_id}}">{{ thing_id }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-danger" type="button" id="delete-btn">
+                                Delete
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock dashboard_content %}
+
+
+{% block script %}
+{{ super() }}
+<script src="{{url_for('static', filename='js/delete2.js')}}"></script>
+{% endblock script%}

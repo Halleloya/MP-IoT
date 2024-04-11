@@ -1,0 +1,10 @@
+{
+    "objectDevice": {
+        "type": "ac",
+        "id": "urn:dev:wot:com:ac:1"
+    },
+    "action": {
+        "type": "set",
+        "temperature": 55
+    }
+}

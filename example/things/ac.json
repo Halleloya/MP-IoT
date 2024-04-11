@@ -1,0 +1,43 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "id": "urn:dev:wot:com:ac:1",
+    "title": "ac",
+    "@type": "ac",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "properties": {
+        "on": {
+            "writable": "true",
+            "schema": { "type": "boolean" },
+            "forms": [{ "href": "/things/ac/properties/on" }],
+            "status": true          
+        },
+        "energy_saving": {
+            "writable": "true",
+            "schema": { "type": "boolean" },
+            "lower_temperature_limit": 65,
+            "upper_temperature_limit": 95,
+            "status": true
+        }
+    },
+    "links": [{
+        "href": "urn:dev:wot:com:noniot:room:3",
+        "rel": "feeds",
+        "mediaType": "application/td"
+    },
+    {
+        "href": "urn:dev:wot:com:noniot:zone:2",
+        "rel": "feeds",
+        "mediaType": "application/td"
+    }]
+}

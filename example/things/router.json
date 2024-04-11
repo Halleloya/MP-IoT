@@ -1,0 +1,31 @@
+{
+    "@context": "https://www.w3.org/2019/wot/td/v1",
+    "id": "urn:dev:wot:com:router:1",
+    "title": "router",
+    "@type": "router",
+    "securityDefinitions": {
+        "basic_sc": {
+            "scheme": "basic",
+            "in": "header"
+        },
+        "nosec_sc": {
+            "scheme": "nosec"
+        }
+    },
+    "security": [
+        "nosec_sc"
+    ],
+    "properties": {
+        "work_power": {
+            "writable": "true",
+            "schema": { "type": "integer" },
+            "forms": [{ "href": "/things/router/properties/work_power" }],
+            "value": 30
+        }
+    },
+    "links": [{
+        "href": "urn:dev:wot:com:smart_plug:1",
+        "rel": "connected_to",
+        "mediaType": "application/td"
+    }]
+}

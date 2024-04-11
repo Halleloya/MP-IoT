@@ -1,0 +1,76 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "id": "urn:dev:wot:com:ebu3b:EBU3B_VAV_Rm_3146_Thermostat",
+  "title": "ebu3b:EBU3B_VAV_Rm_3146_Thermostat",
+  "@type": "brick1:Thermostat",
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "properties": {
+    "fan_speed": {
+      "default": 0,
+      "minimum": 0,
+      "maximum": 100,
+      "type": "integer",
+      "title": "fan_speed"
+    },
+    "energy_consumed": {
+      "default": 0,
+      "minimum": 0,
+      "maximum": 100,
+      "type": "integer",
+      "title": "energy_consumed"
+    },
+    "high_power": {
+      "status": true, 
+      "type": "boolean",
+      "title": "high_power"
+    }
+  },
+  "actions": {
+    "switch_on": {
+      "description": "switch on VAV",
+      "safe": "false",
+      "idempotent": "false"
+    },
+    "switch_off": {
+      "description": "switch off VAV",
+      "safe": "false",
+      "idempotent": "false"
+    },
+    "turn_up": {
+      "description": "turn up fan speed",
+      "safe": "false",
+      "idempotent": "false"
+    },
+    "turn_down": {
+      "description": "turn down fan speed",
+      "safe": "false",
+      "idempotent": "false"
+    }
+  },
+  "links": [
+    {
+      "href": "brick_setup",
+      "rel": "belongsTo",
+      "mediaType": "application/td"
+    },
+    {
+      "href": "urn:dev:wot:com:ebu3b:EBU3B_VAV_Rm_3146",
+      "rel": "brick1:isPartOf",
+      "mediaType": "application/td"
+    },
+    {
+      "href": "urn:dev:wot:com:ebu3b:EBU3B_VAV_Rm_3146",
+      "rel": "feeds",
+      "mediaType": "application/td"
+    }
+  ]
+}

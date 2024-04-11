@@ -1,0 +1,12 @@
+{
+    "objectDevice": {
+        "type": "heater",
+        "id": "urn:dev:wot:com:ebu3b:EBU3B_Heating_Thermal_Power_HVAC"
+    },
+    "action": {
+        "type": "on"
+    }
+}
+
+
+

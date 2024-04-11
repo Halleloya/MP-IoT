@@ -1,0 +1,38 @@
+{
+  "@context": "https://www.w3.org/2022/wot/td/v1.1",
+  "id": "urn:dev:wot:com:ebu3b:EBU3B_Heating_Thermal_Power_HVAC",
+  "title": "ebu3b:EBU3B_Heating_Thermal_Power_HVAC",
+  "@type": "heater",
+  "securityDefinitions": {
+    "basic_sc": {
+      "scheme": "basic",
+      "in": "header"
+    },
+    "nosec_sc": {
+      "scheme": "nosec"
+    }
+  },
+  "security": "nosec_sc",
+  "links": [
+    {
+      "href": "brick_setup",
+      "rel": "belongsTo",
+      "mediaType": "application/td"
+    },
+    {
+      "href": "urn:dev:wot:com:ebu3b:EBU3B_Hot_Water_System",
+      "rel": "brick1:isPointOf",
+      "mediaType": "application/td"
+    },
+    {
+      "href": "urn:dev:wot:com:ebu3b:EBU3B_VAV_Rm_3146",
+      "rel": "feeds",
+      "mediaType": "application/td"
+    },
+    {
+        "href": "urn:dev:wot:com:noniot:zone:2",
+        "rel": "feeds",
+        "mediaType": "application/td"
+    }
+  ]
+}
